@@ -1,4 +1,3 @@
-```
 # LazyLogNet
 
 [![.NET Standard](https://img.shields.io/badge/.NET%20Standard-2.0-blue.svg)](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
@@ -19,7 +18,6 @@
 - 📦 **最小依赖** - 仅依赖 .NET Standard 2.0 和 Newtonsoft.Json
 - 🔄 **自动资源管理** - 程序退出时自动清理，无需手动调用
 - ✅ **配置验证** - 内置参数验证，确保配置合理性
-```
 
 ## ✨ 核心特性
 
