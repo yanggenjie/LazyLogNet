@@ -1,0 +1,66 @@
+<Project>
+
+  <!-- 通用程序集元数据 -->
+  <PropertyGroup>
+    <!-- 版本信息 -->
+    <AssemblyVersion>1.0.8.0</AssemblyVersion>
+    <FileVersion>1.0.8.0</FileVersion>
+    
+    <!-- 产品信息 -->
+    <Product>LazyLogNet</Product>
+    <Title>LazyLogNet - 高性能异步日志库</Title>
+    <Description>一个高性能、轻量级的 .NET 日志库，专为现代应用程序设计。支持异步日志记录、智能文件管理、可配置日志文件夹和结构化日志。</Description>
+    
+    <!-- 作者和公司信息 -->
+    <Authors>LazyLogNet Contributors</Authors>
+    <Company>RyzeYang</Company>
+    <Copyright>Copyright © RyzeYang</Copyright>
+    
+    <!-- 许可证和项目信息 -->
+    <!-- <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/YourUsername/LazyLogNet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/YourUsername/LazyLogNet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>logging;async;performance;netstandard;csharp</PackageTags> -->
+    
+    <!-- 程序集配置 -->
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    
+    <!-- 编译配置 -->
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <WarningsNotAsErrors />
+    
+    <!-- 输出配置 -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    
+    <!-- 调试配置 -->
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <!-- 发布配置 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>true</Optimize>
+    <DefineConstants>RELEASE</DefineConstants>
+  </PropertyGroup>
+
+  <!-- 调试配置 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <!-- 代码分析配置 -->
+  <PropertyGroup>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+</Project>

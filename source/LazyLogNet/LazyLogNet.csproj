@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- 导入通用构建属性 -->
+  <Import Project="../Build.Version.props" />
+  <Import Project="../InternalsVisibleTo.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>LazyLogNet</AssemblyName>
+    <RootNamespace>LazyLogNet</RootNamespace>
+    <OutputType>Library</OutputType>
+    <OutputPath>../bin</OutputPath>
+  </PropertyGroup>
+
+  <!-- 构建后事件：确保bin目录存在 -->
+  <Target Name="EnsureBinDirectory" BeforeTargets="Build">
+    <MakeDir Directories="../bin" Condition="!Exists('../bin')" />
+  </Target>
+
+  <ItemGroup>
+    <!-- 依赖注入抽象包，支持.NET Standard 2.0 -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>

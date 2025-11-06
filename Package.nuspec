@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>LazyLogNet</id>
+    <version>1.0.8</version>
+    <authors>RyzeYang</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/yanggenjie/LazyLogNet</projectUrl>
+    <description>一个高性能、轻量级的 .NET 日志库，专为现代应用程序设计。支持异步日志记录、智能文件管理、可配置日志文件夹和结构化日志。</description>
+    <releaseNotes>
+      <![CDATA[
+        - 高性能异步日志处理，支持批量写入与线程安全。
+        - 控制台与文件输出，支持文件轮转与大小控制。
+        - 结构化日志（JSON/键值对），便于分析与追踪。
+        - 依赖注入支持，便捷集成到 ASP.NET Core/WPF/WinForms。
+      ]]>
+    </releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>日志 控制台 文件 结构化 异步 高性能 netstandard json</tags>
+    <readme>README.md</readme>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="6.0.0" />
+        <dependency id="Newtonsoft.Json" version="13.0.1" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="README.md" target="" />
+    <file src="source\bin\LazyLogNet.dll" target="lib\netstandard2.0" />
+    <file src="source\bin\LazyLogNet.xml" target="lib\netstandard2.0" />
+  </files>
+</package>
